@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Calveri - Premium Scented Essences</title>
+    <meta name="description" content="Discover the premium perfume collection from Calveri. Crafted from the finest essences to express your unique identity.">
+    <meta name="keywords" content="perfume, fragrance, Calveri, premium perfume, scent, aroma, wewangian">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="/data/css/style.css">
+</head>
+<body>
+    
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Mencegah reload halaman
+            const form = event.target;
+            const formData = new FormData(form);
+            const statusDiv = document.getElementById('form-status');
+            
+            fetch(form.action, {
+                method: "POST",
+                body: formData,
+                mode: "no-cors" // Penting untuk Google Forms
+            }).then(() => {
+                form.reset();
+                statusDiv.textContent = "Thank you for subscribing!";
+                statusDiv.style.color = "green";
+            }).catch(() => {
+                statusDiv.textContent = "An error occurred. Please try again.";
+                statusDiv.style.color = "red";
+            });
+        }
+    </script>
+    <div id="splash-page">
+        <div class="splash-logo-area">
+            <div class="logo-text">CALVERI</div>
+        </div>
+        <div id="splash-image-area">
+            <div class="splash-footer-wrapper">
+                <footer class="splash-footer-tagline">
+                    <h1>A Symphony In Scent</h1>
+                    <p>Every drop is a story waiting to unfold.</p>
+                </footer>
+                <footer class="splash-footer-button">
+                    <button id="discover-btn">Discover</button> 
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        
+        <header class="main-header">
+            <button id="nav-toggle-btn" class="nav-icon-btn" aria-label="Open Menu">
+                <div class="hamburger-line line-1"></div>
+                <div class="hamburger-line line-2"></div>
+                <div class="hamburger-line line-3"></div>
+            </button>
+            <div class="main-logo">
+                <div class="logo-text">CALVERI</div>
+            </div>
+            <button id="search-btn" class="nav-icon-btn header-right-btn" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </header>
+        
+        <div class="main-content-wrapper">
+            
+            <section class="pre-hero-section">
+                <h1 class="pre-hero-title">CALVERI CULTURE</h1>
+                <p class="pre-hero-tagline">SCENT ETERNAL</p>
+            </section>
+            
+            <main class="main-page-content">
+                
+                <section class="hero-slider">
+                    <div class="slider-track">
+                        
+                        <div class="slide clone">
+                            <video class="slide-video" src="/assets/videos/video6.mp4" muted loop playsinline></video>
+                            <div class="slide-content">
+                                <h2>OBSSESED</h2>
+                                <p>A Captivating Aura</p>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <video class="slide-video" src="/assets/videos/video1.mp4" muted loop playsinline></video>
+                            <div class="slide-content">
+                                <h2>QUARTTORINO</h2>
+                                <p>The Essence of the Night</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <video class="slide-video" src="/assets/videos/video2.mp4" muted loop playsinline></video>
+                            <div class="slide-content">
+                                <h2>TEXAS</h2>
+                                <p>Boldness in a Bottle</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <video class="slide-video" src="/assets/videos/video3.mp4" muted loop playsinline></video>
+                            <div class="slide-content">
+                                <h2>LLABBRINE</h2>
+                                <p>A Whisper of Elegance</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <video class="slide-video" src="/assets/videos/video4.mp4" muted loop playsinline></video>
+                            <div class="slide-content">
+                                <h2>VEYTORICO</h2>
+                                <p>Legacy of the Woods</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <video class="slide-video" src="/assets/videos/video5.mp4" muted loop playsinline></video>
+                            <div class="slide-content">
+                                <h2>GARDENIA ROSE</h2>
+                                <p>Sun-kissed Radiance</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <video class="slide-video" src="/assets/videos/video6.mp4" muted loop playsinline></video>
+                            <div class="slide-content">
+                                <h2>OBSSESED</h2>
+                                <p>A Captivating Aura</p>
+                            </div>
+                        </div>
+                        
+                        <div class="slide clone">
+                            <video class="slide-video" src="/assets/videos/video1.mp4" muted loop playsinline></video>
+                            <div class="slide-content">
+                                <h2>QUARTTORINO</h2>
+                                <p>The Essence of the Night</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-controls">
+                        <div class="slider-indicators">
+                            <div class="indicator-bar active"></div>
+                            <div class="indicator-bar"></div>
+                            <div class="indicator-bar"></div>
+                            <div class="indicator-bar"></div>
+                            <div class="indicator-bar"></div>
+                            <div class="indicator-bar"></div>
+                        </div>
+                        <button id="play-pause-btn" aria-label="Play or Pause Video">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+                </section>
+                
+                <section class="best-sellers-section">
+                    <h2 class="section-title">BEST SELLERS</h2>
+                    <p class="section-subtitle">Discover our most coveted fragrances.</p>
+                    <div class="subtitle-divider"></div> 
+                    <div class="best-sellers-grid">
+                        
+                        <div class="product-card">
+                            <img src="/assets/images/texas.png" alt="Texas Perfume" class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-name">TEXAS</h3>
+                                <p class="product-description">
+                                    The modern man's armor. An intense fusion of warm spices and dark vanilla. 
+                                    It's not just a scent; it's a statement. A sensual trail that commands the room.
+                                </p>
+                                <button class="buy-now-btn" data-available="true">DISCOVER SCENT</button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="product-card">
+                            <img src="/assets/images/gardenia-rose.png" alt="Gardenia Rose Perfume" class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-name">GARDENIA ROSE</h3>
+                                <p class="product-description">
+                                    A bloom of sweet defiance. This is not a fragile floral. It's a bold gardenia 
+                                    and rose, wrapped in an intoxicating warmth. For an unforgettable presence.
+                                </p>
+                                <button class="buy-now-btn" data-available="true">DISCOVER SCENT</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="collection-teaser-section">
+                    <div class="collection-header">
+                        <h2 class="section-title">MEN'S COLLECTION</h2>
+                        <a href="#" class="view-all-link">
+                            <span>VIEW ALL COLLECTIONS</span>
+                            <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                        </a>
+                    </div>
+                    <p class="section-subtitle">Explore the full range of masculine scents.</p>
+                    <div class="subtitle-divider"></div> 
+                    
+                    <img src="/assets/images/men-collection.png" alt="Men's Collection" class="collection-teaser-image">
+                    
+                    <div class="collection-story-content">
+                        <h3 class="featured-title">MEN'S FRAGRANCE</h3>
+                        <p class="featured-description">
+                            This is our ode to masculinity. Each scent is a chapter, from the quiet strength 
+                            of the earth to the undeniable charisma of the night. Crafted for the man who authors his own destiny.
+                        </p>
+                        <div class="bottom-button-wrapper">
+                            <a href="#" class="view-all-link-bottom bordered-link">
+                                <span>View All</span>
+                                <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="collection-teaser-section">
+                    <div class="collection-header">
+                        <h2 class="section-title">WOMEN'S COLLECTION</h2>
+                        <a href="#" class="view-all-link">
+                            <span>VIEW ALL COLLECTIONS</span>
+                            <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                        </a>
+                    </div>
+                    <p class="section-subtitle">Discover our portfolio of elegant feminine scents.</p>
+                    <div class="subtitle-divider"></div> 
+                    
+                    <img src="/assets/images/women-collection.png" alt="Women's Collection" class="collection-teaser-image">
+                    
+                    <div class="collection-story-content">
+                        <h3 class="featured-title">WOMEN'S FRAGRANCE</h3>
+                        <p class="featured-description">
+                            The essence of her story. A collection that celebrates every facet of femininity—from 
+                            a captivating whisper to a bold declaration. These are scents of grace, power, and self-expression.
+                        </p>
+                        <div class="bottom-button-wrapper">
+                            <a href="#" class="view-all-link-bottom bordered-link">
+                                <span>View All</span>
+                                <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="home-teaser-section quiz-teaser-box">
+                    <div class="quiz-teaser-content">
+                        <h2 class="section-title">FIND YOUR SIGNATURE SCENT</h2>
+                        <p class="section-subtitle">Let us guide you to the perfect aroma that tells your unique story.</p>
+                        <a href="#" class="btn-outline">Start The Quiz</a>
+                    </div>
+                </section>
+                
+                <section class="home-teaser-section new-fragrance-teaser">
+                    <img src="/assets/images/quarttorino.png" alt="Quarttorino Perfume" class="new-fragrance-image">
+                    <div class="new-fragrance-content">
+                        <h2 class="section-title">NEW FRAGRANCE</h2>
+                        <h3 class="featured-title">QUARTTORINO</h3>
+                        <p class="featured-description">
+                            A new chapter unfolds. Discover the essence of the night, a captivating blend of mystery and allure, coming soon.
+                        </p>
+                        <a href="#" class="view-all-link-bottom" data-available="false">
+                            <span>Discover Now</span>
+                            <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                        </a>
+                    </div>
+                </section>
+                
+                <section class="home-teaser-section journal-teaser-box">
+                    <div class="journal-teaser-content">
+                        <h2 class="section-title">THE JOURNAL</h2>
+                        <p class="section-subtitle">Explore the stories and inspirations behind our scents.</p>
+                        <div class="journal-featured-story">
+                            <h3 class="featured-title">A Night in Sicily</h3>
+                            <p class="featured-description">
+                                The air was thick with the scent of citrus and sea salt, a memory captured in time...
+                            </p>
+                            <a href="#" class="view-all-link-bottom">
+                                <span>Read More</span>
+                                <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                
+                </main>
+        </div> 
+        
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-section footer-subscribe">
+                    <h4>JOIN THE INNER CIRCLE</h4>
+                    <p class="footer-tagline">Be the first to discover new scents, exclusive offers, and the stories behind Calveri.</p>
+                    
+                    <form id="subscribe-form" action="httpsYOUR_GOOGLE_FORM_ACTION_URL/formResponse" method="POST" target="_self" onsubmit="handleFormSubmit(event)">
+                        
+                        <div class="form-group">
+                            <input type="email" name="entry.XXXXXXXXXX" placeholder="Enter your email" required>
+                            <button type="submit" aria-label="Subscribe">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </button>
+                        </div>
+                        <div id="form-status"></div>
+                    </form>
+                    
+                </div>
+                
+                <div class="footer-section footer-links">
+                    <h4>EXPLORE</h4>
+                    <a href="#" class="footer-link">Collections</a>
+                    <a href="#" class="footer-link">Scent Quiz</a>
+                    <a href="#" class="footer-link">New Fragrance</a>
+                    <a href="#" class="footer-link">The Journal</a>
+                    <a href="#" class="footer-link">About Calveri</a>
+                </div>
+                
+                <div class="footer-section footer-social">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Calveri. All Rights Reserved.</p>
+            </div>
+        </footer>
+        </div>
+
+    <div id="side-nav">
+        <div class="side-nav-header">
+            <div class="logo-text">CALVERI</div>
+            <button id="nav-close-btn" class="nav-icon-btn" aria-label="Close Menu">
+                <div class="hamburger-line line-1"></div>
+                <div class="hamburger-line line-2"></div>
+                <div class="hamburger-line line-3"></div>
+            </button>
+        </div>
+        
+        <div class="side-nav-content">
+            
+            <div class="side-nav-main">
+                
+                <div class="nav-section">
+                    <h2>COLLECTION</h2>
+                    <p class="nav-section-subtitle">Our Scented Chapters</p>
+                    <div class="nav-section-divider"></div>
+                    
+                    <div class="nav-group">
+                        <h3>MEN'S COLLECTION</h3>
+                        <button class="nav-link nav-dropdown-toggle">
+                            <span>VIEW ALL COLLECTION</span>
+                            <span class="dropdown-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-link" data-available="true">TEXAS</a>
+                            <a href="#" class="dropdown-link" data-available="false">QUARTTORINO</a>
+                            <a href="#" class="dropdown-link" data-available="false">VEYTORICO</a>
+                            <a href="#" class="dropdown-link all-collections-link">
+                                <span>ALL COLLECTION</span>
+                                <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-group">
+                        <h3>WOMEN'S COLLECTION</h3>
+                        <button class="nav-link nav-dropdown-toggle">
+                            <span>VIEW ALL COLLECTION</span>
+                            <span class="dropdown-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-link" data-available="false">LLABBRINE</a>
+                            <a href="#" class="dropdown-link" data-available="false">OBSSESED</a>
+                            <a href="#" class="dropdown-link" data-available="true">GARDENIA ROSE</a>
+                            <a href="#" class="dropdown-link all-collections-link">
+                                <span>ALL COLLECTION</span>
+                                <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <h2>EXPLORE</h2>
+                    <p class="nav-section-subtitle">Discover Our World</p>
+                    <div class="nav-section-divider"></div>
+                    <a href="#" class="nav-link">
+                        <span>All Collections</span>
+                        <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h2>SCENT QUIZ</h2>
+                    <p class="nav-section-subtitle">Find Your Perfect Scent</p>
+                    <div class="nav-section-divider"></div>
+                    <a href="#" class="nav-link">
+                        <span>Start The Quiz</span>
+                        <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <h2>NEW FRAGRANCE</h2>
+                    <p class="nav-section-subtitle">The Latest Chapter</p>
+                    <div class="nav-section-divider"></div>
+                    <a href="#" class="nav-link">
+                        <span>Discover Now</span>
+                        <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h2>THE JOURNAL</h2>
+                    <p class="nav-section-subtitle">Our Scented Stories</p>
+                    <div class="nav-section-divider"></div>
+                    <a href="#" class="nav-link">
+                        <span>Read More</span>
+                        <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h2>ABOUT CALVERI</h2>
+                    <p class="nav-section-subtitle">Our Philosophy</p>
+                    <div class="nav-section-divider"></div>
+                    <a href="#" class="nav-link">
+                        <span>Learn More</span>
+                        <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </a>
+                </div>
+                </div>
+            
+            <div class="side-nav-utility">
+                <div class="nav-section">
+                    <h2>CUSTOMER CARE</h2>
+                    <a href="#" class="nav-link">
+                        <span>STORE LOCATOR</span>
+                        <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span>CONTACT US / FAQ</span>
+                        <span class="link-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <h2>SETTINGS</h2>
+                    <div class="nav-setting-item">
+                        <span class="setting-label">
+                            <i class="fa-solid fa-palette"></i> 
+                            DISPLAY MODE
+                        </span>
+                        <button id="theme-toggle-btn" class="theme-toggle-switch" aria-label="Toggle dark mode">
+                            <span class="toggle-slider"></span>
+                        </button>
+                    </div>
+                    <div class="nav-setting-item">
+                        <span class="setting-label">
+                            <i class="fa-solid fa-globe"></i> 
+                            LANGUAGE
+                        </span>
+                        <button class="nav-link nav-dropdown-toggle" id="language-btn">
+                            <span id="lang-text-active">ENGLISH</span>
+                            <span class="dropdown-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-link lang-option" data-lang="id">INDONESIA</a>
+                            <a href="#" class="dropdown-link lang-option" data-lang="en">ENGLISH</a>
+                            <a href="#" class="dropdown-link lang-option" data-lang="fr">FRANÇAIS</a>
+                            <a href="#" class="dropdown-link lang-option" data-lang="it">ITALIANO</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <h2>FOLLOW US</h2>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div id="search-overlay">
+        <div class="search-header">
+            <button id="search-close-btn" class="nav-icon-btn" aria-label="Close Search">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="search-input-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Search for a scent..." autocomplete="off">
+            </div>
+        </div>
+        
+        <div class="search-content">
+            <div id="search-results-container">
+                </div>
+            
+            <div id="search-history-container">
+                </div>
+            
+            <div id="search-suggestions-container">
+                <h2 class="search-section-title">FOR YOU</h2>
+                <p class="search-tagline">Discover scents tailored to your style.</p>
+            </div>
+        </div>
+    </div>
+    <div id="nav-overlay"></div>
+
+    <div id="availability-modal" class="availability-overlay">
+        <div class="availability-content">
+            <button id="modal-close-btn" class="nav-icon-btn" aria-label="Close">
+                <div class="hamburger-line line-1"></div>
+                <div class="hamburger-line line-2"></div>
+            </button>
+            <i class="fa-regular fa-clock modal-icon"></i>
+            <h2>Coming Soon</h2>
+            <p>This scent is not yet available.<br>A new story is waiting to be told.</p>
+        </div>
+    </div>
+    <audio id="flip-sound" src="/assets/sounds/slide-book.mp3" preload="auto"></audio>
+
+    <script src="/data/js/script.js"></script>
+</body>
+</html>
